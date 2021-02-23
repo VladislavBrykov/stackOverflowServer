@@ -1,0 +1,148 @@
+To Start
+node index.js
+
+Command:
+
+
+/*-----------Authentication module----------------*/ 
+/*------------------------------------------------*/
+Регистрация
+{ 
+ 	"login": "test",
+ 	"password": "test_pass",
+ 	"passwordConfirmation": "test_pass",
+ 	"email": "test@gmail.com"
+}
+
+Логин
+{ 
+ 	"login": "vbrykov",
+ 	"password": "Vladislav5",
+ 	"email": "vlad5brykov@gmail.com"
+}
+
+log out authorized user
+{ 
+ 	"id": 10
+}
+
+Bосстановление пароля запрос на почту
+{ 
+ 	"login": "vbrykov",
+ 	"id": 61,
+ 	"mail": "vlad5brykov@gmail.com"
+}
+
+Bосстановление пароля с кодом (на мейл)
+{ 
+ 	"password": "newPassword",
+ 	"id": "10"
+}
+
+// /*-----------------User module--------------------*/ 
+// /*------------------------------------------------*/
+
+
+
+
+Oт имени админа создать пользователя v
+{
+ 	"login": "vbrykov",
+ 	"password": "qweqweqwe",
+ 	"password_confirmation": "qweqweqwe",
+ 	"email": "vlad5brykov@gmail.com",
+ 	"role": "admin",
+    "role_user": "admin"
+}
+
+
+Aватар подгружает только авторизированный пользователь
+{ 
+ 	"id": "63",
+ "avatar" : "http/sdfdsggerg"
+}
+
+Изменить данные пользователя
+{ 
+ 	"mail": "61@GMAIL.COM"
+ 	"login": "61vbrykov",
+    "password": "61",
+    "role": "admin"
+}
+
+Удалить пользователя
+{ 
+    "role": "admin"
+}
+
+// /*-----------------Post module--------------------*/ 
+// /*------------------------------------------------*/
+
+
+Добавить комментарий к посту
+{
+ 	"id_user": 61,
+ 	"comment": "Hello world new comment"
+}
+
+
+Добавить новый пост
+{
+ 		"title": "описание",
+    	"content": "какой-то контент",
+    	"categories": "JavaScript",
+ 		"user": 70
+}
+
+Поставить лайк под постом   v
+{
+ 	"id_user": 61,
+    "type_role": "like"
+}
+
+Изменить данные поста
+{ 
+ 	"title": "описание",
+ 	"body": "тело поста",
+    "category": "категория не выбрана",
+    "content": "new content",
+ 	"status": "onn"
+}
+ 
+
+Удалить лайк под постом/комментарием
+{
+	 	"id_user": "описание",
+	 	"type": "post/comment"
+}
+
+// /*---------------Categories module----------------*/ показал
+// /*------------------------------------------------*/
+
+
+Добавить новую категорию v
+{
+ 	"category": "название категории"
+}
+
+Изменить данные категории v
+{
+ 	"category: "new название категории"
+}
+
+// /*----------------Comments module-----------------*/ 
+// /*------------------------------------------------*/
+
+Поставить лайк под комментарием
+{
+ 	"id_user": 61,
+	"post_id": 1,
+    "type_role": "like"
+}
+
+Изменить данные комментария
+{
+ 	"status: "on"
+}
+
+module.exports = router
