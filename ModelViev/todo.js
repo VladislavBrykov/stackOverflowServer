@@ -546,6 +546,7 @@ router.post('/posts', (req, res) => {
 	let data = req.body;
 	let token = req.headers.authorization
 	console.log(data);
+	console.log(token);
 
 	if(!token)  //для неавторизированного посетителя
 	res.status(403).json('login or registration');

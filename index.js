@@ -3,6 +3,8 @@ const path = require('path');
 const todoRoutes = require('./ModelViev/todo');
 const app = express();
 app.use(express.static('upload'));
+let cors = require('cors');
+app.use(cors());
 
 const PORT = process.env.PORT || 3000;
 
