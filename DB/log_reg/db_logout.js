@@ -23,6 +23,7 @@ function db_logout(jwt_token) {
 
        const jwt_sqll = `SELECT id FROM tokens WHERE jwt_token = ?`;
        connection.query(jwt_sqll, jwt_token, function(err, results) {
+           console.log(results);
         if(results.length < 1) {
             console.log("err");
             resolve(false);

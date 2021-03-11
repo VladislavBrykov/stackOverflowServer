@@ -125,7 +125,7 @@ router.post('/auth/login', (req, res) => {
 // log out authorized user
 router.post('/auth/logout', (req, res) => {
 	let data = req.headers;
-	console.log(data);
+	console.log(data.authorization);
 
 	new Promise((resolve, reject) => {
 		const result = require('../DB/log_reg/db_logout')

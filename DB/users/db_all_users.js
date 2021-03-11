@@ -47,7 +47,29 @@ function db_all_users() {
                                 b
                             }
 
-                    resolve(res);
+let large = [{"user_id": 1, "page_views": 7, "clicks": 5},
+  {"user_id": 5, "page_views": 6, "clicks": 3},
+  {"user_id": 9, "page_views": 4, "clicks": 7},
+  {"user_id": 1, "page_views": 3, "clicks": 5}
+];
+
+let small = [{"id": 9, "first_name": "Barnabas"},
+  {"id": 1, "first_name": "Emlyn"},
+  {"id": 5, "first_name": "Ervin"}
+]
+
+let result = a.map(item => {
+  let { id, login } = item;
+  let { avatar } = b.reduce((acc, data) => {
+    if (data.id == id) {
+      acc.avatar += data.avatar;
+    }
+    return acc;
+  }, {avatar: 0, login: 0});
+  return { id, login, avatar }
+});
+
+                    resolve(result);
                 });
             });
         });
